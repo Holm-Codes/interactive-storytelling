@@ -5,35 +5,54 @@
 
 /* Define variables in the :root */
  :root {
-   --backgr: #FFFFFF;
+   --backgr: #000000;
    --purple: #8B4DBA;
    --contrast: #000000;
    --dark-purple: #7451FF;
-
+   --text: #FFFFFF;
  }
 
-body {
-  #backgr-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-  }
+#backgr-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
 
-h1, h2 {
+h1 {
   font-family: "hwt-arabesque", sans-serif;
   font-weight: 400;
+  font-size: 50px;
   font-style: normal;
+  color: var(--text);
+}
+
+h2 {
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+  color: var(--text);
+}
+
+h3, h4, h5, h6 {
+  font-family: "roca", sans-serif;
+  font-weight: 400, 700, 800;
+  font-style: normal;
+  color: var(--text);
+}
+
+p {
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text);
 }
 
 
 /* Use your variables on elements */
- main {
-   color: var(--contrast);
-   background-color: var(--backgr);
- }
+
 
  .video-background {
   position: absolute;

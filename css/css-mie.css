@@ -1,0 +1,183 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Define variables in the :root */
+ :root {
+   --backgr: #000000;
+   --purple: #8B4DBA;
+   --contrast: #000000;
+   --dark-purple: #7451FF;
+   --text: #FFFFFF;
+ }
+
+#backgr-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+h1 {
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  font-style: normal;
+  color: var(--text);
+}
+
+h2 {
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+  color: var(--text);
+}
+
+h3, h4, h5, h6 {
+  font-family: "roca", sans-serif;
+  font-weight: 400, 700, 800;
+  font-style: normal;
+  color: var(--text);
+}
+
+p {
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text);
+}
+
+
+/* Use your variables on elements */
+
+
+ .video-background {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
+ }
+ 
+ .spacing{
+  margin-left: 5px;
+ }
+
+ .dropdown-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+ }
+
+ .kalender-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--text); 
+  margin-right: 0px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--contrast);
+}
+
+.place-container {
+  display: flex;
+  justify-self: center;
+  overflow: hidden;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  padding: auto;
+  border: 1px solid var(--contrast);
+}
+
+.time-container {
+  display: flex;
+  justify-self: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--text);
+  overflow: hidden;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  border: 1px solid var(--contrast);
+}
+
+#kl {
+  color: var(--contrast);
+  font-family: "roca", sans-serif;
+  padding-top: 2px;
+}
+
+.time-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+span {
+  font-size: 16px;
+}
+
+button, input, select, textarea {
+  font-family: "hwt-arabesque", sans-serif;
+}
+
+.stjerne-container {
+  display: flex; 
+  justify-self: center;
+  align-items: center;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 100;
+  margin: 0;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+/*Knappen*/
+.stjerne-beregn {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-family: "roc-grotesk", sans-serif;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--text);
+  color: var(--contrast);
+  margin: 10px;
+  margin-top: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.stjerne-beregn:hover {
+  background-color: var(--purple)
+}
+
+.big3-container {
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+}

@@ -58,7 +58,7 @@ p {
   z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
  }
 
-<<<<<<< HEAD
+
  /* Grundlæggende styling */
 body {
   display: flex;
@@ -136,13 +136,3 @@ main {
   height: 80px;
   margin-bottom: 5px;
 }
-=======
-
-
-
-
-
-
-
->>>>>>> 1e2660dcf69b6a4de2a1234bc82483ea071b2295
-

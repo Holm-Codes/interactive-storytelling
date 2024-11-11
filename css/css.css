@@ -1,7 +1,4 @@
-/**
- * file: css/css.css
- * purpose: styling
- **/
+
 
 /* Define variables in the :root */
  :root {
@@ -50,10 +47,7 @@ p {
   color: var(--text);
 }
 
-
 /* Use your variables on elements */
-
-
  .video-background {
   position: absolute;
   object-fit: cover;
@@ -63,3 +57,82 @@ p {
   height: 100%;
   z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
  }
+
+ /* Grundlæggende styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--backgr); /*er til for hvis bg-video ikke viser så kommer der farve*/
+}
+
+/* Styling til main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*Ikone til flag og højtaler*/
+.icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.
+
+
+/* Container for cirkle */
+.container {
+  position: relative;
+  width: 400px; 
+  height: 400px;
+}
+
+/* Cirkle */
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Postion for hver icon uden den drjer rundt*/
+.zodiac {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+
+  /* Til at få iconer i en cirkel, men iconer er vandratte */
+  transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -300px) rotate(calc(-1 * var(--angle) * 1deg));
+  text-align: center;
+}
+
+.zodiac a {
+  display: flex;
+  flex-direction: column; /* Stacks icon and text vertically */
+  align-items: center;    /* Centers the icon and text horizontally */
+  text-decoration: none;
+  color: var(--text);
+  font-family:  "roca", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--text);
+}
+
+
+.zodiac img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+}
+

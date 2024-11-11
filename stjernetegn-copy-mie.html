@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stjernetegn</title>
+  <link rel="stylesheet" href="css/css-mie.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop id="backgr-video">
+      <source src="media/backgr-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <main>
+    <div class="dropdown-container">
+        <input type="text" id="date-input" placeholder="DD/MM/YYYY" readonly>
+        <input type="text" id="place-input" placeholder="Vælg fødeby" readonly>
+        <input type="text" id="time-input" placeholder="Kl. 12:34" readonly>
+    </div>
+    <div class="stjerne-container">
+      <input type="checkbox" class="stjerne-container" name="stjerne-knap" value="fødselstidspunkt">
+      <label for="stjerne-knap" class="stjerne-container"> Jeg kender ikke mit præcise fødselstidspunkt</label><br>
+    </div>
+    <button class="stjerne-beregn">Beregn</button>
+    <form>
+      <span>
+        <label for="day">Dag:</label>
+        <select name="day" id="day"></select>
+      </span>
+      <span>
+        <label for="month">Måned:</label>
+        <select name="month" id="month"></select>
+      </span>
+      <span>
+        <label for="year">År:</label>
+        <select name="year" id="year"></select>
+      </span>
+    </form>
+</main>
+  <script src="js/js-mie.js"></script>
+</body>
+</html>

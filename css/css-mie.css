@@ -63,50 +63,84 @@ p {
   height: 100%;
   z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
  }
+ 
+ .spacing{
+  margin-left: 5px;
+ }
 
  .dropdown-container {
   display: flex;
-  justify-self: center;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 70%;
-  margin: 20px;
-  border: 1px solid var(--text);
-}
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+ }
 
-input[type="text"] {
-  background-color: var(--text); /* Matches the input color */
-  border: none;
-  font-family: "hwt-arabesque", sans-serif;
-  font-size: 20px;
+ .kalender-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--text); 
+  margin-right: 0px;
+  margin-bottom: 15px;
   padding: 10px;
-  width: 100%; /* Adjust width as needed */
-  text-align: center;
+  border: 1px solid var(--contrast);
+}
+
+.place-container {
+  display: flex;
+  justify-self: center;
+  overflow: hidden;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  padding: auto;
+  border: 1px solid var(--contrast);
+}
+
+.time-container {
+  display: flex;
+  justify-self: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--text);
+  overflow: hidden;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  border: 1px solid var(--contrast);
+}
+
+#kl {
+  color: var(--contrast);
+  font-family: "roca", sans-serif;
+  padding-top: 2px;
+}
+
+.time-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
   outline: none;
-  appearance: none;
-  position: relative;
 }
 
-input[type="text"] + input[type="text"] {
-  border-left: 1px solid var(--contrast);
-}
-
-input[type="text"]::placeholder {
-  color: var(--contrast)
-}
-
-form span {
-  display:inline-block;
-  margin: 20px 0;
-  font-family: "roc-grotesk", sans-serif;
-  
+span {
+  font-size: 16px;
 }
 
 button, input, select, textarea {
   font-family: "hwt-arabesque", sans-serif;
 }
-
-
 
 .stjerne-container {
   display: flex; 
@@ -121,6 +155,7 @@ button, input, select, textarea {
   font-style: italic;
 }
 
+/*Knappen*/
 .stjerne-beregn {
   display: flex;
   justify-self: center;
@@ -139,4 +174,10 @@ button, input, select, textarea {
 
 .stjerne-beregn:hover {
   background-color: var(--purple)
+}
+
+.big3-container {
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
 }

@@ -73,3 +73,25 @@ yearSelect.onchange = function(){
 monthSelect.onchange = function (){
     populateDays(monthSelect.value);
 }
+
+/* Time picker javascript*/
+document.addEventListener('DOMContentLoaded', () => {
+    const hourSelect = document.getElementById('hourSelect');
+    const minuteSelect = document.getElementById('minuteSelect');
+  
+    // Populate the hours dropdown (0 to 23)
+    for (let i = 0; i < 24; i++) {
+      const hourOption = document.createElement('option');
+      hourOption.value = i;
+      hourOption.textContent = i < 10 ? `0${i}` : i;
+      hourSelect.appendChild(hourOption);
+    }
+  
+    // Populate the minutes dropdown (0 to 59)
+    for (let i = 0; i < 60; i++) {
+      const minuteOption = document.createElement('option');
+      minuteOption.value = i;
+      minuteOption.textContent = i < 10 ? `0${i}` : i;
+      minuteSelect.appendChild(minuteOption);
+    }
+  });

@@ -92,11 +92,10 @@ p {
 .place-container {
   display: flex;
   justify-self: center;
-  overflow: hidden;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 10px;
-  padding: auto;
+
   border: 1px solid var(--contrast);
 }
 
@@ -106,7 +105,6 @@ p {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: var(--text);
-  overflow: hidden;
   margin-left: 0px;
   margin-bottom: 15px;
   border: 1px solid var(--contrast);

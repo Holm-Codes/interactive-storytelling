@@ -1,3 +1,5 @@
+const introTekst = document.getElementsByClassName("indledendetekst");
+
 
 // ----- SCROLLBAR --- //
 const krop = document.querySelector("body"); 
@@ -10,7 +12,15 @@ function flytBar(){ //Tilføjer en funktion der starter når jeg scroller
     scrollBar.style.top = scrollPosition + "px"; //Værdien kan ændres, eks. style.right
 }
 
-
-//Siget til koden at ved scroll skal funktionen flytBar sættes i gang
+//Siger til koden at ved scroll skal funktionen flytBar sættes i gang
 window.onscroll = flytBar; 
 krop.onscrollend = test;
+
+function fadeInd(){
+let foerste_positionsinfo = introTekst.getBoundingClientRect();
+
+if(foerste_positionsinfo.top < window.innerHeight - 150){
+    introTekst.style.opacity = "1";
+}
+
+}

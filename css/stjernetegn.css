@@ -69,7 +69,7 @@
 #scrollBar{
   position: fixed;
   right: 30px;
-  margin-top: 20px
+  margin-top: 20px 
 }
  
 /* --- UDDYBBENDE STJERNETEGN - DELEN --- */
@@ -81,6 +81,8 @@
     margin: 5% 10% 5% 10%;
     text-align: center;
     font-size: larger;
+    transition: all 1s;
+    opacity: 0;
  }
 
 
@@ -93,6 +95,21 @@
    max-width: 65%; /* Begrænser bredden af kontaktsektionen til 60% */
  }
 
+
+/* Fade-in effekt med animation */
+.CKuddybbendestjernetegn {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;  /* Anvender fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;  /* Start med usynlig */
+  }
+  100% {
+    opacity: 1;  /* Slut med synlig */
+  }
+}
 
 /*Placering af #qrKode*/
 #qrKode{

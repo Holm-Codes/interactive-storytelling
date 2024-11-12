@@ -14,3 +14,15 @@ playSoundButton.addEventListener('click', function() {
         playSoundButton.src = "images/lyd_ikon.webp";  // Skift ikon til play
     }
 });
+
+const introVideo = document.getElementById('introVideo');
+const mainContent = document.getElementById('mainContent');
+
+// Add an event listener to the video to detect when it ends
+introVideo.addEventListener('ended', () => {
+    // Hide the video
+    introVideo.style.display = 'none';
+    
+    // Show the main content
+    mainContent.style.display = 'block';
+});

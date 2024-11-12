@@ -19,30 +19,31 @@ window.onscroll = function () {
 let scrollPosition; // Denne variabel gemmer den aktuelle position, man er scrollet ned til
 
 function flytBar() { //Tilføjer en funktion der starter når jeg scroller
-    const totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const viewportHeight = window.innerHeight;
+    const totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight; // Beregner den samlede højde af hele dokumentet minus højden af vinduet
+    const viewportHeight = window.innerHeight; // Højden på selve vinduet (viewport)
 
-    // Update the current scroll position
+    // Opdaterer den nuværende scrollposition
     scrollPosition = window.scrollY;
 
-    // Calculate the proportional position of the scrollbar
-    const scrollBarPosition = (scrollPosition / totalScrollableHeight) * (viewportHeight - 120); // 50 is an arbitrary height for scrollBar
+    const scrollBarPosition = (scrollPosition / totalScrollableHeight) * (viewportHeight - 120); // Beregner den relative position af scrollbaren, baseret på scrollpositionen
 
-    scrollBar.style.top = scrollBarPosition + "px"; //Værdien kan ændres, eks. style.right
+    // Opdaterer scrollbarens position på skærmen ved at sætte dens top-værdi i forhold til dens relative position
+    scrollBar.style.top = scrollBarPosition + "px"; //Placerer baren i oppe i hjørnet, så den går ned ad
 }
 
 
 // FADE IN AF TEKSTERNE
 
 function fadeInd() {
-    const dele = [delEt, delTo, delTre]; // Definerer et array med de dele, der skal fade in/out
+    const dele = [delEt, delTo, delTre]; // Opretter et array, der indeholder de elementer, som skal fade in og fade out
 
     dele.forEach((del) => { // Går gennem delene i arrayet og udfører funktionen på hver
         const positionInfo = del.getBoundingClientRect(); // Henter positionen af hvert element relativt til vinduet
 
-        if (positionInfo.top < window.innerHeight - 150) { // Siger til koden at, hvis toppen af elementet er mindre end vinduets højde minus 150px,
+        if (positionInfo.top < window.innerHeight - 150) { // Tjekker om toppen af elementet er tættere på bunden af vinduet
+
             del.style.opacity = "1"; // Sætter opaciteten til 1, når koden
-        } else { //Siger til koden af hvis ikke højden er som defineret skal det fade ud igen
+        } else {                     //Siger til koden af hvis ikke højden er som defineret skal det fade ud igen
             del.style.opacity = "0"; // Tilføjer også en fading ud-effekt
         }
     });

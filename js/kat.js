@@ -84,4 +84,5 @@ function showZodiacDetails(zodiacName) {
 // Funktion til at skjule detaljevisningen
 function hideZodiacDetails() {
     document.getElementById("zodiac-details").classList.remove("active");
+    window.location.href = 'stjernetegn.html';
 }

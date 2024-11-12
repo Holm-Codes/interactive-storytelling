@@ -1,160 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Stjernetegn</title>
+
+  <!-- Linker til den tilsvarende cssfil samt javascripten-->
   <link rel="stylesheet" href="css/stjernetegn.css">
-  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
-  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
-  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
   <script src="js/stjernetegn.js" defer></script>
+
+  <!-- Linker til de forskellige fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+
 </head>
 
-<body>  
-<main>
-  <div class="video-background">
-    <video autoplay muted loop id="backgr-video">
-      <source src="media/backgr-video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
+<body>
+  <main>
+    <!-- VIDEO -->
+    <div class="video-background">
+      <video autoplay muted loop id="backgr-video">
+        <source src="media/backgr-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video. <!-- Teksten kommer frem, hvis videoen ikke kan afspilles-->
+      </video>
+    </div>
 
 
-<!-- SCROLL BAR-->
-<button id="scrollBar"></button>
-
-  <!-- FØRSTE INDLEDNING -->
-  <h1>VANDMANDEN</h1>
-
-  <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="introTekst">Klar til at udforske Vandmandens unikke univers? Med din trang til frihed og nysgerrighed
-    skiller du dig ud som en ægte original! Som lufttegn tænker du kreativt og udfordrer normer, hvilket gør dig til en
-    inspirerende og innovativ ven. Oplev, hvordan din tilgang kan åbne døre til nye eventyr og forbindelser!
-  </p>
+    <!-- SCROLL BAR -->
+    <!-- Laver scrollbaren til en knap, så den er lettere at style efterfølgende -->
+    <button id="scrollBar"></button>
 
 
 
-    <!-- UDDYBBENDE TEKSTER M. TILHØRERENDE IKONER -->
+    <!-- FØRSTE DEL -->
+    <h1>VANDMANDEN</h1>
 
-  <!-- Inddeler det i sektioner for at kunne style det nemmere efter
-  Giver sektionerne samme class, da de skal styles ens -->
-<section id="foersteDel">
-
-  <section class="astroInfo">
-    <img src="images/kaerlighed_ikon.webp" alt="Et stregtegnet ikon af et hjerte" width="170">
-
-    <article>
-      <h3>KÆRLIGHED</h3>
-      <p>I kærlighedens verden er det tid til at slippe din indre romantiker fri! Er du single, kan en spændende
-        forbindelse være tæt på - vær åben for spontane eventyr. Hvis du er i et forhold, så lad kreativiteten stråle og
-        overrask din partner. Husk at nyde øjeblikket og have det sjovt!</p>
-    </article>
-  </section>
+    <!--Giver paragraphen en class, da den (sammen med andre) skal styles anderledes end de variable der er defineret i CSS'en-->
+    <p class="introTekst">Klar til at udforske Vandmandens unikke univers? Med din trang til frihed og nysgerrighed
+      skiller du dig ud som en ægte original! Som lufttegn tænker du kreativt og udfordrer normer, hvilket gør dig til
+      en
+      inspirerende og innovativ ven. Oplev, hvordan din tilgang kan åbne døre til nye eventyr og forbindelser!
+    </p>
 
 
-  <section class="astroInfo">
-    <img src="images/karriere_ikon.webp" alt="Et stregtegnet ikon af en kuffert, som skal symbolisere 'karriere"
-      width="175">
+    <!-- Inddeler det i store og små sektioner for at skabe struktur og nemmere at kunne style efter -->
+    <section id="foersteDel">
 
-    <article>
-      <h3>KARRIERE</h3>
-      <p>Karrieren ser lys ud for Vandmanden! Din nysgeerighed og innovative natur vil skille sig ud i en
-        konkurrencepræget verden. Del dine idéer og lad dine unikke perspektiver lede dig mod nye muligheder.</p>
-    </article>
-  </section>
+      <!--  Giver de små sektioner samme class, da de skal styles ens -->
+      <section class="astroInfo">
+        <img src="images/kaerlighed.webp" alt="Et stregtegnet ikon af et hjerte" width="170">
+
+        <article>
+          <h3>KÆRLIGHED</h3>
+          <p>I kærlighedens verden er det tid til at slippe din indre romantiker fri! Er du single, kan en spændende
+            forbindelse være tæt på - vær åben for spontane eventyr. Hvis du er i et forhold, så lad kreativiteten
+            stråle og
+            overrask din partner. Husk at nyde øjeblikket og have det sjovt!</p>
+        </article>
+      </section>
 
 
-  <section class="astroInfo">
-    <img src="images/oekonomi_ikon.webp"
-      alt="Et stregtegnet ikon af en kurve med en pil, som peger op ad, som skal symbolisere økonomi" width="175">
-    <article>
-      <h3>ØKONOMI</h3>
-      <p>Tænk smart med økonomien! Små investeringer i dine interesser kan betale sig. Udnyt dine færdigheder til at
-        tjene ekstra, f.eks. gennem freelancearbejde eller små projekter, der både er sjove og giver økonomisk gevinst.
-      </p>
-    </article>
-  </section>
-</section>
+      <section class="astroInfo">
+        <img src="images/karriere_ikon.webp"
+          alt="Et hvidt stregtegnet ikon af en kuffert, som skal symbolisere karriere" width="175">
 
-<!-- ANDEN INDLEDNING -->
+        <article>
+          <h3>KARRIERE</h3>
+          <p>Karrieren ser lys ud for Vandmanden! Din nysgeerighed og innovative natur vil skille sig ud i en
+            konkurrencepræget verden. Del dine idéer og lad dine unikke perspektiver lede dig mod nye muligheder.</p>
+        </article>
+      </section>
 
-<section id="andenDel">
-  <h2>DIN ASTROLOGISKE PROFIL</h2>
 
-  <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="introTekst">Velkommen til astrologiens verden! Din 'Big Three' - soltegn, månetegn og ascendant -
-    former din unikke personlighed. Soltegnet viser, hvem du er, månetegnet afslører dine følelser, og ascendanten
-    viser, hvordan du fremstår udadtil.</p>
-  <p class="introTekst">Indtast din fødselsdato og -tid for at beregne dine 'Big Three'.
-  <p>
-
-    <!--Mies del indsættes her-->
+      <section class="astroInfo">
+        <img src="images/oekonomi_ikon.webp"
+          alt="Et hvidt stregtegnet ikon af en kurve med en pil, som peger op ad, som skal symbolisere økonomi"
+          width="175">
+        <article>
+          <h3>ØKONOMI</h3>
+          <p>Tænk smart med økonomien! Små investeringer i dine interesser kan betale sig. Udnyt dine færdigheder til at
+            tjene ekstra, f.eks. gennem freelancearbejde eller små projekter, der både er sjove og giver økonomisk
+            gevinst.
+          </p>
+        </article>
+      </section>
+    </section>
 
 
 
+    <!-- ANDEN DEL -->
+    <!-- Inddeler det i store og små sektioner for at skabe struktur og nemmere at kunne style efter -->
+    <section id="andenDel">
+      <h2>DIN ASTROLOGISKE PROFIL</h2>
+
+      <!--Giver paragraphen en class, da den (sammen med andre) skal styles anderledes end de variable der er defineret i CSS'en-->
+      <p class="introTekst">Velkommen til astrologiens verden! Din 'Big Three' - soltegn, månetegn og ascendant -
+        former din unikke personlighed. Soltegnet viser, hvem du er, månetegnet afslører dine følelser, og ascendanten
+        viser, hvordan du fremstår udadtil.</p>
+      <p class="introTekst">Indtast din fødselsdato og -tid for at beregne dine 'Big Three'.
+      <p>
+
+        <!-- Mies del indsættes her -->
 
 
-    <!-- UDDYBBENDE TEKSTER M. TILHØRERENDE IKONER, DEL2 
+        <!--  Giver de små sektioner samme class, da de skal styles ens -->
+      <section class="astroInfo">
+        <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
 
-Inddeler det i sektioner for at kunne style det nemmere efter
-Giver sektionerne samme class, da de skal styles ens -->
-  <section class="astroInfo">
-    <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
-
-    <article>
-      <h3>SOLTEGN</h3>
-      <p>Med Vandmanden som dit soltegn er du en sand original! Som et lufttegn er du uafhængig, nysgerrig og fyldt med
-        innovative ideer. Du elsker at tænke uden for boksen og har en dyb interesse for menneskehedens velbefindende.
-        Dine unikke perspektiver og sociale ånd gør dig til en inspirerende ven.</p>
-    </article>
-  </section>
-
-
-  <section class="astroInfo">
-    <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
-
-    <article>
-      <h3>MÅNETEGN</h3>
-      <p>Med dit månetegn i Krebsen er du et meget følende menneske!
-        Det betyder også at dine dybeste behov handler om følelsesmæssig nærhed og tryghed. Din intuition og empati er
-        stærke, og du skaber gerne et varmt og trygt rum for dem, du holder af.</p>
-    </article>
-  </section>
+        <article>
+          <h3>SOLTEGN</h3>
+          <p>Med Vandmanden som dit soltegn er du en sand original! Som et lufttegn er du uafhængig, nysgerrig og fyldt
+            med
+            innovative ideer. Du elsker at tænke uden for boksen og har en dyb interesse for menneskehedens
+            velbefindende.
+            Dine unikke perspektiver og sociale ånd gør dig til en inspirerende ven.</p>
+        </article>
+      </section>
 
 
-  <section class="astroInfo">
-    <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
-      width="175">
-    <article>
-      <h3>ASCENDANT</h3>
-      <p>Med Skorpionen som ascendant er du intens og gådefuld, og folk mærker hurtigt, at der er dybde bag facaden. Din
-        aura udstråler magnetisk tiltrækning og stille styrke, og du søger altid autenticitet i alt, du gør.</p>
-    </article>
-  </section>
+      <section class="astroInfo">
+        <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
 
-</section>
-
-<section id="tredjeDel">
-  <!-- TREDJE INDLEDNING -->
-  <h2>DEL MED VENNERNE</h2>
-
-  <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="introTekst">Dine 'Big Three' - soltegn, månetegn og ascendant - giver dig en unik indsigt i, hvem du
-    er. Udforsk disse aspekter for at opnå dybere selvforståelse og forbedre dine relationer. </p>
-
-  <img src="images/qrkoode.webp" alt="QR kode, som skal føre til sociale medier så man kan dele sine resultater"
-    width="300" id="qrKode">
-
-  <p class="introTekst">Del din rejse med dine venner på sociale medier ved at scanne QR-koden og lad dem opdage
-    deres personlige astrologiske univers. </p>
-
-</section>
+        <article>
+          <h3>MÅNETEGN</h3>
+          <p>Med dit månetegn i Krebsen er du et meget følende menneske!
+            Det betyder også at dine dybeste behov handler om følelsesmæssig nærhed og tryghed. Din intuition og empati
+            er
+            stærke, og du skaber gerne et varmt og trygt rum for dem, du holder af.</p>
+        </article>
+      </section>
 
 
-</main>
+      <section class="astroInfo">
+        <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
+          width="175">
+        <article>
+          <h3>ASCENDANT</h3>
+          <p>Med Skorpionen som ascendant er du intens og gådefuld, og folk mærker hurtigt, at der er dybde bag facaden.
+            Din
+            aura udstråler magnetisk tiltrækning og stille styrke, og du søger altid autenticitet i alt, du gør.</p>
+        </article>
+      </section>
+
+    </section>
+
+
+
+
+    <!-- TREDJE DEL -->
+
+    <!-- Inddeler det i en sektioner for at skabe struktur og nemmere at kunne style efter -->
+    <section id="tredjeDel">
+
+      <h2>DEL MED VENNERNE</h2>
+
+      <!--Giver paragraphen en class, da den (sammen med andre) skal styles anderledes end de variable der er defineret i CSS'en-->
+
+      <p class="introTekst">Dine 'Big Three' - soltegn, månetegn og ascendant - giver dig en unik indsigt i, hvem du
+        er. Udforsk disse aspekter for at opnå dybere selvforståelse og forbedre dine relationer. </p>
+
+      <img src="images/qrkoode.webp" alt="QR kode, som skal føre til sociale medier så man kan dele sine resultater"
+        width="300" id="qrKode">
+
+      <p class="introTekst">Del din rejse med dine venner på sociale medier ved at scanne QR-koden og lad dem opdage
+        deres personlige astrologiske univers. </p>
+
+    </section>
+
+
+  </main>
 </body>
 
 </html>
+
+<!-- SIDEN ER VALIDERET - ALT OK! -->

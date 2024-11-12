@@ -1,12 +1,21 @@
-
-const delEt = document.getElementById("foersteDel");
+// Henter HTML-elementer og gemmer dem i konstanter for nemt at kunne referere til dem senere 
+const delEt = document.getElementById("foersteDel"); 
 const delTo = document.getElementById("andenDel");
 const delTre = document.getElementById("tredjeDel");
+const krop = document.querySelector("body"); 
+const scrollBar = document.getElementById("scrollBar");
 
 
-// ----- SCROLLBAR --- //
-const krop = document.querySelector("body");
-const scrollBar = document.getElementById("scrollBar"); //Henter elementet fra HTML og giver den en konstant variabel scrollBar
+
+// Laver en funktion til min onscroll, da der er to funktioner der skal igangsættes når man scroller
+window.onscroll = function () {
+    flytBar(); // Sørger for funktionen flytBar starter når man scroller
+    fadeInd(); // Sørger for funktionen fadeInd starter når man scroller
+};
+
+
+// TIL SCROLLBAREN
+
 let scrollPosition; // Denne variabel gemmer den aktuelle position, man er scrollet ned til
 
 function flytBar() { //Tilføjer en funktion der starter når jeg scroller
@@ -22,49 +31,21 @@ function flytBar() { //Tilføjer en funktion der starter når jeg scroller
     scrollBar.style.top = scrollBarPosition + "px"; //Værdien kan ændres, eks. style.right
 }
 
-// //Siger til koden at ved scroll skal funktionen flytBar sættes i gang
-// window.onscroll = flytBar;
-// // krop.onscrollend = test;
 
-
-// // Når man scroller i vinduet kaldes funktionen minFunktion:
-// window.onscroll = fadeInd;
-// //vi spørger vinduet fordi det er når vinduet bliver scrollet 
-
-window.onscroll = function () {
-    flytBar();
-    fadeInd();
-};
+// FADE IN AF TEKSTERNE
 
 function fadeInd() {
-    const dele = [delEt, delTo, delTre];
+    const dele = [delEt, delTo, delTre]; // Definerer et array med de dele, der skal fade in/out
 
-    dele.forEach((del) => {
-        const positionInfo = del.getBoundingClientRect();
+    dele.forEach((del) => { // Går gennem delene i arrayet og udfører funktionen på hver
+        const positionInfo = del.getBoundingClientRect(); // Henter positionen af hvert element relativt til vinduet
 
-        if (positionInfo.top < window.innerHeight - 150) {
-            del.style.opacity = "1";
-        } else {
+        if (positionInfo.top < window.innerHeight - 150) { // Siger til koden at, hvis toppen af elementet er mindre end vinduets højde minus 150px,
+            del.style.opacity = "1"; // Sætter opaciteten til 1, når koden
+        } else { //Siger til koden af hvis ikke højden er som defineret skal det fade ud igen
             del.style.opacity = "0"; // Tilføjer også en fading ud-effekt
         }
     });
 }
 
-// function fadeInd() {
-//     let andenPostionsinfo = delTo.getBoundingClientRect();
-//     let tredjePostionsinfo = delTre.getBoundingClientRect();
-
-//     if (andenPostionsinfo.top < window.innerHeight - 150) {
-//         delTo.style.opacity = "1";
-//     } else {
-//         delTo.style.opacity = "0"; // Tilføjer også en fading ud-effekt
-//     }
-
-//     if (tredjePostionsinfo.top < window.innerHeight - 150) {
-//         delTre.style.opacity = "1";
-//     } else {
-//         delTre.style.opacity = "0"; // Tilføjer også en fading ud-effekt
-//     }
-
-
-// }
+// KODEN ER VALIDERET - ALT OK! 

@@ -118,6 +118,29 @@ display: block; /* Gør elementet til en blok, så det kan centreres og tilpasse
   width: 300px; /* Sætter elementets bredde til 300 px */
 }
 
+.star {
+  text-align: center;
+  position: relative;
+}
 
+.icon {
+  display: inline-block;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.icon-move {
+  transform: translateX(-100px); /* Flytter ikonet til venstre efter aktivering */
+}
+
+.infographic {
+  display: none; /* Så infografikken starter ud som skjult */
+  margin: 20px auto;
+  padding: 20px;
+  
+  background-color: transparent;
+  width: 80%;
+  max-width: 500px;
+}
 
 /* ---- SIDEN ER VALIDERET - ALT OK! ---- */

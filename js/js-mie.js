@@ -123,3 +123,17 @@ console.log('Success: JavaScript from js/js.js running!')
                 toggleState = !toggleState; // Toggle the state
             });
 
+            const starIcon = document.getElementById('star-icon');
+            const infographic = document.getElementById('infographic');
+            const iconContainer = document.getElementById('star-container');
+    
+            // Toggle infographic visibility and move the icon
+            star-icon.addEventListener('click', () => {
+                if (infographic.style.display === 'none' || !infographic.style.display) {
+                    infographic.style.display = 'block';
+                    iconContainer.classList.add('icon-move');
+                } else {
+                    infographic.style.display = 'none';
+                    iconContainer.classList.remove('icon-move');
+                }
+            });

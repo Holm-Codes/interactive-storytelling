@@ -48,4 +48,14 @@ function fadeInd() {
     });
 }
 
+starIcon.addEventListener('click', () => {
+    if (infographic.style.display === 'none' || !infographic.style.display) {
+        infographic.style.display = 'block';
+        starContainer.classList.add('icon-move');
+    } else {
+        infographic.style.display = 'none';
+        starContainer.classList.remove('icon-move');
+    }
+});
+
 // KODEN ER VALIDERET - ALT OK! 

@@ -2,11 +2,11 @@
 /* ---- FÆLLES VARIABLER FOR SITET ---- */
 
 :root {
-    --backgr: #000000;
-    --purple: #8B4DBA;
-    /* --contrast: #000000;
-    --dark-purple: #7451FF; */
-    --text: #FFFFFF;
+  --backgr: #000000;
+  --purple: #8B4DBA;
+  --contrast: #000000;
+  --dark-purple: #7451FF;
+  --text: #FFFFFF;
   }
  
  /* Placering af baggrundsvideoen */ 
@@ -107,16 +107,8 @@
    max-width: 65%;     /* Begrænser bredden af til 65% */
  }
 
+/* ---- Infografik styling ---- */
 
-
-/* ---- QR koden ---- */
-
-/*Placering af #qrKode*/
-#qrKode{
-display: block; /* Gør elementet til en blok, så det kan centreres og tilpasses i bredden */
-  margin: auto; /* Centrerer elementet */
-  width: 300px; /* Sætter elementets bredde til 300 px */
-}
 
 .star {
   text-align: center;
@@ -137,10 +129,144 @@ display: block; /* Gør elementet til en blok, så det kan centreres og tilpasse
   display: none; /* Så infografikken starter ud som skjult */
   margin: 20px auto;
   padding: 20px;
-  
   background-color: transparent;
   width: 80%;
   max-width: 500px;
 }
+
+#infografik-video {
+  height: 700px;
+  width: auto;
+}
+
+/* ---- Down down menuer og Big 3 beregner styling ---- */
+.spacing{
+  margin-left: 5px;
+ }
+
+ .dropdown-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+ }
+
+ .kalender-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--text); 
+  margin-right: 0px;
+  padding: 10px;
+  border: 1px solid var(--contrast);
+}
+
+.place-container {
+  display: flex;
+  justify-self: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  border: 1px solid var(--contrast);
+}
+
+.time-container {
+  display: flex;
+  justify-self: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--text);
+  margin-left: 0px;
+  border: 1px solid var(--contrast);
+}
+
+#kl {
+  color: var(--contrast);
+  font-family: "roca", sans-serif;
+  padding-top: 2px;
+}
+
+.time-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: -10px;
+  margin-top: -9px;
+
+}
+
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+button, input, select, textarea {
+  font-family: "hwt-arabesque", sans-serif;
+}
+
+.stjerne-container {
+  display: flex; 
+  justify-self: center;
+  align-items: center;
+  font-family: "roc-grotesk", sans-serif;
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 100;
+  margin: 0;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+/*Beregn Knappen*/
+.stjerne-beregn {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-family: "roc-grotesk", sans-serif;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--text);
+  color: var(--contrast);
+  margin: 10px;
+  margin-top: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.stjerne-beregn:hover {
+  background-color: var(--purple)
+}
+
+.big3-container {
+  display: flex; 
+  align-items: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ---- QR koden ---- */
+
+/*Placering af #qrKode*/
+#qrKode{
+display: block; /* Gør elementet til en blok, så det kan centreres og tilpasses i bredden */
+  margin: auto; /* Centrerer elementet */
+  width: 300px; /* Sætter elementets bredde til 300 px */
+}
+
+
 
 /* ---- SIDEN ER VALIDERET - ALT OK! ---- */

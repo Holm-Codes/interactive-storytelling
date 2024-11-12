@@ -26,14 +26,15 @@
         <source src="media/backgr-video.mp4" type="video/mp4">
         Your browser does not support HTML5 video. <!-- Teksten kommer frem, hvis videoen ikke kan afspilles-->
       </video>
+      <audio control autoplay>
+        <source src="media/backgr-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
-
 
     <!-- SCROLL BAR -->
     <!-- Laver scrollbaren til en knap, så den er lettere at style efterfølgende -->
     <button id="scrollBar"></button>
-
-
 
     <!-- FØRSTE DEL -->
     <h1>VANDMANDEN</h1>
@@ -62,7 +63,6 @@
         </article>
       </section>
 
-
       <section class="astroInfo">
         <img src="images/karriere_ikon.webp"
           alt="Et hvidt stregtegnet ikon af en kuffert, som skal symbolisere karriere" width="175">
@@ -73,7 +73,6 @@
             konkurrencepræget verden. Del dine idéer og lad dine unikke perspektiver lede dig mod nye muligheder.</p>
         </article>
       </section>
-
 
       <section class="astroInfo">
         <img src="images/oekonomi_ikon.webp"
@@ -89,16 +88,19 @@
       </section>
     </section>
   <!-- Infografik pop-up-->
+   
+      <div class="star">
+        <div id="starContainer" class="icon">
+            <img src="images/star.webp" alt="Star Icon" width="50" id="starIcon">
+        </div>
+        <div id="infographic" class="infographic">
+          <video autoplay muted controls id="infografik-video">
+            <source src="media/infografik.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. <!-- Teksten kommer frem, hvis videoen ikke kan afspilles-->
+          </video>
+        </div>
+      </div>
 
-    <div class="star">
-      <div id="starContainer" class="icon">
-          <img src="images/star.webp" alt="Star Icon" width="50" id="starIcon">
-      </div>
-      
-      <div id="infographic" class="infographic">
-          <<h3>Infographic Title</h3>
-      </div>
-  </div>
 
 
     <!-- ANDEN DEL -->
@@ -113,48 +115,120 @@
       <p class="introTekst">Indtast din fødselsdato og -tid for at beregne dine 'Big Three'.
       <p>
 
-        <!-- Mies del indsættes her -->
-
+        <!-- Dorop down menu sektion (Dag, måned, år, sted og tid) og big 3 beregner -->
+        <div class="big3-container">
+          <div class="dropdown-container">
+            <form class="kalender-container">
+              <span  class="spacing">
+                <label for="day">Dag:</label>
+                <select name="day" id="day"></select> <!-- Dropdown menu til dag-->
+              </span>
+              <span class="spacing">
+                <label for="month">Måned:</label>
+                <select name="month" id="month"></select> <!-- Dropdown menu til måned-->
+              </span>
+              <span class="spacing">
+                <label for="year">År:</label>
+                <select name="year" id="year"></select> <!-- Dropdown menu til år-->
+              </span>
+            </form>
+            <input type="text" class="place-container" placeholder="Indtast fødeby"> <!-- Et felt hvor brugeren kan indtaste data, her deres fødeby-->
+            <div class="time-container">
+              <div class="time-picker">
+                <p id="kl">
+                  Kl:
+                </p>
+                <select id="hourSelect"> <!-- Dropdown menu til time-->
+                  <!-- JavaScript vil sætte time indholdet ind her -->
+                </select>
+                <span>:</span>
+                <select id="minuteSelect"> <!-- Dropdown menu til minut-->
+                  <!-- JavaScript vil sætte minut indholdet ind her -->
+                </select>
+              </div>
+              </div>
+          </div>
+          <div class="stjerne-container">
+            <input type="checkbox" class="stjerne-container" name="stjerne-knap" value="fødselstidspunkt"> <!-- Checkboks -->
+            <label for="stjerne-knap" class="stjerne-container"> Jeg kender ikke mit præcise fødselstidspunkt</label><br>
+          </div>
+          <button class="stjerne-beregn" id="toggleButton">Beregn</button>
+        </div>
 
         <!--  Giver de små sektioner samme class, da de skal styles ens -->
-      <section class="astroInfo">
-        <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
+      <div id="content1" class="hidden">
+        <section class="astroInfo">
+          <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
 
-        <article>
-          <h3>SOLTEGN</h3>
-          <p>Med Vandmanden som dit soltegn er du en sand original! Som et lufttegn er du uafhængig, nysgerrig og fyldt
-            med
-            innovative ideer. Du elsker at tænke uden for boksen og har en dyb interesse for menneskehedens
-            velbefindende.
-            Dine unikke perspektiver og sociale ånd gør dig til en inspirerende ven.</p>
-        </article>
-      </section>
+          <article>
+            <h3>SOLTEGN</h3>
+            <p>Med Vandmanden som dit soltegn er du en sand original! Som et lufttegn er du uafhængig, nysgerrig og fyldt
+              med
+              innovative ideer. Du elsker at tænke uden for boksen og har en dyb interesse for menneskehedens
+              velbefindende.
+              Dine unikke perspektiver og sociale ånd gør dig til en inspirerende ven.</p>
+          </article>
+        </section>
 
+        <section class="astroInfo">
+          <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
 
-      <section class="astroInfo">
-        <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
+          <article>
+            <h3>MÅNETEGN</h3>
+            <p>Med dit månetegn i Krebsen er du et meget følende menneske!
+              Det betyder også at dine dybeste behov handler om følelsesmæssig nærhed og tryghed. Din intuition og empati
+              er
+              stærke, og du skaber gerne et varmt og trygt rum for dem, du holder af.</p>
+          </article>
+        </section>
 
-        <article>
-          <h3>MÅNETEGN</h3>
-          <p>Med dit månetegn i Krebsen er du et meget følende menneske!
-            Det betyder også at dine dybeste behov handler om følelsesmæssig nærhed og tryghed. Din intuition og empati
-            er
-            stærke, og du skaber gerne et varmt og trygt rum for dem, du holder af.</p>
-        </article>
-      </section>
+        <section class="astroInfo">
+          <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
+            width="175">
+          <article>
+            <h3>ASCENDANT</h3>
+            <p>Med Skorpionen som ascendant er du intens og gådefuld, og folk mærker hurtigt, at der er dybde bag facaden.
+              Din
+              aura udstråler magnetisk tiltrækning og stille styrke, og du søger altid autenticitet i alt, du gør.</p>
+          </article>
+        </section>
+      </div>
+      <div id="content2" class="hidden">
+        <section class="astroInfo">
+          <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
 
+          <article>
+            <h3>SOLTEGN</h3>
+            <p>Med Løven som dit soltegn stråler du som en ægte stjerne! Løven er et ildtegn, hvilket betyder at du er
+              selvsikker, kreativ og fuld af livsglæde. Du har en naturlig evne til at lede og inspirere andre, og du
+              elsker at dele dine passioner. Med et stort hjerte og en forkærlighed for det dramatiske, er du altid klar
+              til at tage spotlightet.</p>
+          </article>
+        </section>
 
-      <section class="astroInfo">
-        <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
-          width="175">
-        <article>
-          <h3>ASCENDANT</h3>
-          <p>Med Skorpionen som ascendant er du intens og gådefuld, og folk mærker hurtigt, at der er dybde bag facaden.
-            Din
-            aura udstråler magnetisk tiltrækning og stille styrke, og du søger altid autenticitet i alt, du gør.</p>
-        </article>
-      </section>
+        <section class="astroInfo">
+          <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
 
+          <article>
+            <h3>MÅNETEGN</h3>
+            <p>Med dit månetegn i Tyren gør dig til en sand livsnyder med en forkærlighed for
+              komfort og stabilitet. Tyren er et jordtegn, hvilket betyder at dine følelser er dybe
+              og jordnære. Din tålmodighed og beslutsomhed gør dig til en trofast ven, hvilket
+              også giver dig evnerne til at skabe rare omgivelser så folk føler sig hjemme.</p>
+          </article>
+        </section>
+
+        <section class="astroInfo">
+          <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
+            width="175">
+          <article>
+            <h3>ASCENDANT</h3>
+            <p>At have Vædderen som ascendant betyder, at du møder verden som en sand pioner! At have et ildtegn som 
+               ascendant gør, at folk ser dig som stærk, handlekraftig og altid klar på nye udfordringer. Din tilgang
+              er direkte og energisk. Denne ildfulde ascendant gør dig til en naturlig leder og eventyrer.</p>
+          </article>
+        </section>
+      </div>
     </section>
 
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stjernetegn</title>
+
+    <link rel="stylesheet" href="css/kat.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fqf5cva.css">
+
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="backgr-video">
+            <source src="media/backgr-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+    </div>
+
+        <main>
+            <nav class="icons">
+                <img src="images/lyd_ikon.webp" alt="Play Sound" id="play-sound" style="width: 60px; cursor: pointer;">
+                <img src="images/eng_flag.webp" alt="Change Language" id="change-language"
+                    style="width: 70px; cursor: pointer;">
+            </nav>
+
+            <audio id="audio" src="media/sound.mp3"></audio> <!--link til lydfil -->
+
+            <div class="container">
+                <div class="circle">
+                    <!-- 12 stjernetegn -->
+                    <figure class="zodiac" style="--angle: 0;" onclick="showZodiacDetails('Vædderen')">
+                        <a href="#" title="Vædderen">
+                            <img src="images/vaedderen.webp" alt="Vædderen">
+                            <figcaption>Vædderen</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 30;" onclick="showZodiacDetails('Tyren')">
+                        <a href="#" title="Tyren">
+                            <img src="images/tyren.webp" alt="Tyren">
+                            <figcaption>Tyren</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 60;" onclick="showZodiacDetails('Tvillingen')">
+                        <a href="#" title="Tvillingen">
+                            <img src="images/tvillingen.webp" alt="Tvillingen">
+                            <figcaption>Tvillingen</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 90;" onclick="showZodiacDetails('Krebsen')">
+                        <a href="#" title="Krebsen">
+                            <img src="images/krebsen.webp" alt="Krebsen">
+                            <figcaption>Krebsen</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 120;" onclick="showZodiacDetails('Løven')">
+                        <a href="#" title="Løven">
+                            <img src="images/loeven.webp" alt="Løven">
+                            <figcaption>Løven</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 150;" onclick="showZodiacDetails('Jomfruen')">
+                        <a href="#" title="Jomfruen">
+                            <img src="images/jomfruen.webp" alt="Jomfruen">
+                            <figcaption>Jomfruen</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 180;" onclick="showZodiacDetails('Vægten')">
+                        <a href="#" title="Vægten">
+                            <img src="images/vaegten.webp" alt="Vægten">
+                            <figcaption>Vægten</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 210;" onclick="showZodiacDetails('Skorpionen')">
+                        <a href="#" title="Skorpionen">
+                            <img src="images/scorpionen.webp" alt="Skorpionen">
+                            <figcaption>Skorpionen</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 240;" onclick="showZodiacDetails('Skytten')">
+                        <a href="#" title="Skytten">
+                            <img src="images/skytten.webp" alt="Skytten">
+                            <figcaption>Skytten</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 270;" onclick="showZodiacDetails('Stenbukken')">
+                        <a href="#" title="Stenbukken">
+                            <img src="images/stenbukken.webp" alt="Stenbukken">
+                            <figcaption>Stenbukken</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 300;" onclick="showZodiacDetails('Vandmanden')">
+                        <a href="#" title="Vandmanden">
+                            <img src="images/vandmanden.webp" alt="Vandmanden">
+                            <figcaption>Vandmanden</figcaption>
+                        </a>
+                    </figure>
+                    <figure class="zodiac" style="--angle: 330;" onclick="showZodiacDetails('Fisken')">
+                        <a href="#" title="Fisken">
+                            <img src="images/fisken.webp" alt="Fisken">
+                            <figcaption>Fisken</figcaption>
+                        </a>
+                    </figure>
+
+                    <!-- Detaljevisning af det valgte stjernetegn -->
+                    <div class="zodiac-details" id="zodiac-details">
+                        <div class="zodiac-large">
+                            <img id="zodiac-image">
+                            <h2 id="zodiac-name"></h2>
+                            <p id="zodiac-description"></p>
+                            <button onclick="hideZodiacDetails()">Læs mere</button>
+                        </div>
+                    </div>
+
+
+                </div>
+        </main>
+        
+
+    <script src="js/kat.js" defer></script>
+</body>
+
+</html>

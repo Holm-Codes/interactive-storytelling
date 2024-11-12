@@ -50,10 +50,6 @@ p {
   color: var(--text);
 }
 
-
-/* Use your variables on elements */
-
-
  .video-background {
   position: absolute;
   object-fit: cover;
@@ -74,6 +70,7 @@ p {
   align-self: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 10px;
  }
 
  .kalender-container {
@@ -84,7 +81,6 @@ p {
   border-bottom-left-radius: 20px;
   background-color: var(--text); 
   margin-right: 0px;
-  margin-bottom: 15px;
   padding: 10px;
   border: 1px solid var(--contrast);
 }
@@ -94,9 +90,9 @@ p {
   justify-self: center;
   margin-left: 0px;
   margin-right: 0px;
-  margin-bottom: 10px;
-
+  padding-left: 5px;
   border: 1px solid var(--contrast);
+
 }
 
 .time-container {
@@ -106,7 +102,6 @@ p {
   border-bottom-right-radius: 20px;
   background-color: var(--text);
   margin-left: 0px;
-  margin-bottom: 15px;
   border: 1px solid var(--contrast);
 }
 
@@ -123,6 +118,9 @@ p {
   gap: 5px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: -10px;
+  margin-top: -9px;
+
 }
 
 select {
@@ -130,10 +128,6 @@ select {
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
-}
-
-span {
-  font-size: 16px;
 }
 
 button, input, select, textarea {
@@ -178,4 +172,13 @@ button, input, select, textarea {
   display: flex; 
   align-items: center;
   flex-direction: column;
+}
+
+#codeContainer {
+  width: 80%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  white-space: pre-wrap;
+  margin-top: 20px;
 }

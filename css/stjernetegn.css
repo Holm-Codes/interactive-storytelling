@@ -1,27 +1,40 @@
 
+/* ---- FÆLLES VARIABLER FOR SITET ---- */
 
-/* Define variables in the :root */
 :root {
     --backgr: #000000;
     --purple: #8B4DBA;
-    --contrast: #000000;
-    --dark-purple: #7451FF;
+    /* --contrast: #000000;
+    --dark-purple: #7451FF; */
     --text: #FFFFFF;
   }
  
+ /* Placering af baggrundsvideoen */ 
  #backgr-video {
-   position: fixed;
+   position: fixed; /* Sørger for at den forbliver ved den givne position*/
    right: 0;
    bottom: 0;
    min-width: 100%; 
    min-height: 100%;
  }
  
+
+ .video-background {
+  position: absolute;
+  /* object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
+ }
+
+
+/*Styling af tekster*/
  h1 {
    font-family: "hwt-arabesque", sans-serif;
    font-weight: 400;
    font-size: 50px;
-   font-style: normal;
    color: var(--text);
    text-align: center; /*Placerer teksten i midten af siden*/ 
  }
@@ -37,7 +50,7 @@
  
  h3, h4, h5, h6 {
    font-family: "roca", sans-serif;
-   font-weight: 400, 700, 800;
+   font-weight: 700;
    font-style: normal;
    color: var(--text);
  }
@@ -49,77 +62,63 @@
    color: var(--text);
  }
 
+  
  
- 
- /* Use your variables on elements */
- 
- 
-  .video-background {
-   position: absolute;
-   object-fit: cover;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: -1; /*Sørger for er video er i baggrunden, så indholdet kan vises ovenpå*/
-  }
- 
- 
- /* --------- SCROLLBAR --------- */
+/* ---- SCROLLBAR ---- */
+
+/* Placering og styling af scrollbaren*/
 #scrollBar{
-  position: fixed;
-  right: 30px;
-  margin-top: 20px;
+  position: fixed;  /* Fastgør elementet, så det forbliver på samme sted på skærmen */
+  right: 30px;      /* Placerer elementet 30px fra højre kant af skærmen */
+  margin-top: 20px; /* Tilføjer 20px margen ovenover elementet */
+  cursor: pointer;  /* Ændrer markøren til en hånd ved hover */
+  padding: 50px 10px; /* Gør knappen større med indvendig afstand */
+  background-color: #ffffff; /* Grøn baggrundsfarve */
+  border: none;     /*Fjerne kanten*/
+  border-radius: 20px; /* Giver knappen bløde, afrundede kanter */
+
 }
  
-/* --- UDDYBBENDE STJERNETEGN - DELEN --- */
 
-#andenDel{
-  transition: all 2s;
-  opacity:0;
+
+
+/* ---- UDDYBBENDE TEKSTER - DELEN ---- */
+
+/* Styling af del elementerne */
+#foersteDel, #andenDel, #tredjeDel{
+  transition: all 2s; /* Tilføjer overgangstid på 2 sekunder */
+  opacity:0;          /* Gør elementerne usynlige ved at sætte gennemsigtigheden til 0; de vil først blive vist, når JavaScript ændrer opacity ved scroll */
 }
 
-#tredjeDel{
-  transition: all 1s;
-  opacity: 0;
-}
 
-/*Placering og styling af .indledendetekst, da disse skal se anderledes ud*/
-  .indledendetekst {
-    margin: 5% 10% 5% 10%;
-    text-align: center;
-    font-size: larger;
+/*Placering og styling af .indledendetekst, da disse skal se anderledes ud end de andre paragraphs */
+  .introTekst {
+    margin: 5% 10% 5% 10%; /* Tilføjer margin */
+    text-align: center;    /* Placerer teksterne */
+    font-size: larger;     /* Gør denne tekst større */
+ }
+
+ /*Placering og styling af sektionerne*/
+ .astroInfo{
+   display: flex;      /* Bruger flexbox til at arrangere elementerne */
+   margin: 3% 0 5% 5%; /* Tilføjer margener omkring sektionen */
+   gap: 13%;           /* Tilføjer en afstand på 13% mellem de enkelte flex-elementer */
+   padding-left: 12%;  /* Tilføjer 12% padding til venstre */
+   max-width: 65%;     /* Begrænser bredden af til 65% */
  }
 
 
- /*Placering og Styling af sektionerne*/
- .CKuddybbendestjernetegn{
-   display: flex; /*Bruger flexbox til at arrangere elementerne*/
-   margin: 3% 0 5% 5%; /*Tilføjer margener omkring sektionen*/
-   gap: 13%; /* Tilføjer en afstand på 7% mellem de enkelte flex-elementer */
-   padding-left: 12%; /* Tilføjer 20% padding til venstre */
-   max-width: 65%; /* Begrænser bredden af kontaktsektionen til 60% */
- }
 
-
-/* Fade-in effekt med animation */
-.CKuddybbendestjernetegn {
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;  /* Anvender fade-in animation */
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;  /* Start med usynlig */
-  }
-  100% {
-    opacity: 1;  /* Slut med synlig */
-  }
-}
+/* ---- QR koden ---- */
 
 /*Placering af #qrKode*/
 #qrKode{
-display: block;
-  margin: auto;
-  width: 300px;
+display: block; /* Gør elementet til en blok, så det kan centreres og tilpasses i bredden */
+  margin: auto; /* Centrerer elementet */
+  width: 300px; /* Sætter elementets bredde til 300 px */
 }
+
+
+
+
+/* ---- SIDEN ER VALIDERET - ALT OK! ---- */

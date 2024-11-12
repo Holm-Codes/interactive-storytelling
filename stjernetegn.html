@@ -13,7 +13,8 @@
   <script src="js/stjernetegn.js" defer></script>
 </head>
 
-<body>
+<body>  
+<main>
   <div class="video-background">
     <video autoplay muted loop id="backgr-video">
       <source src="media/backgr-video.mp4" type="video/mp4">
@@ -23,14 +24,13 @@
 
 
 <!-- SCROLL BAR-->
-<img id="scrollBar" src="images/scrollBar.webp" alt ="Hvid scrollbar som følger med dokumentet" width="20px">
-
+<button id="scrollBar"></button>
 
   <!-- FØRSTE INDLEDNING -->
   <h1>VANDMANDEN</h1>
 
   <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="indledendetekst">Klar til at udforske Vandmandens unikke univers? Med din trang til frihed og nysgerrighed
+  <p class="introTekst">Klar til at udforske Vandmandens unikke univers? Med din trang til frihed og nysgerrighed
     skiller du dig ud som en ægte original! Som lufttegn tænker du kreativt og udfordrer normer, hvilket gør dig til en
     inspirerende og innovativ ven. Oplev, hvordan din tilgang kan åbne døre til nye eventyr og forbindelser!
   </p>
@@ -41,8 +41,9 @@
 
   <!-- Inddeler det i sektioner for at kunne style det nemmere efter
   Giver sektionerne samme class, da de skal styles ens -->
+<section id="foersteDel">
 
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/kaerlighed_ikon.webp" alt="Et stregtegnet ikon af et hjerte" width="170">
 
     <article>
@@ -51,10 +52,10 @@
         forbindelse være tæt på - vær åben for spontane eventyr. Hvis du er i et forhold, så lad kreativiteten stråle og
         overrask din partner. Husk at nyde øjeblikket og have det sjovt!</p>
     </article>
-  </aside>
+  </section>
 
 
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/karriere_ikon.webp" alt="Et stregtegnet ikon af en kuffert, som skal symbolisere 'karriere"
       width="175">
 
@@ -63,10 +64,10 @@
       <p>Karrieren ser lys ud for Vandmanden! Din nysgeerighed og innovative natur vil skille sig ud i en
         konkurrencepræget verden. Del dine idéer og lad dine unikke perspektiver lede dig mod nye muligheder.</p>
     </article>
-  </aside>
+  </section>
 
 
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/oekonomi_ikon.webp"
       alt="Et stregtegnet ikon af en kurve med en pil, som peger op ad, som skal symbolisere økonomi" width="175">
     <article>
@@ -75,18 +76,19 @@
         tjene ekstra, f.eks. gennem freelancearbejde eller små projekter, der både er sjove og giver økonomisk gevinst.
       </p>
     </article>
-  </aside>
+  </section>
+</section>
 
-  <!-- ANDEN INDLEDNING -->
+<!-- ANDEN INDLEDNING -->
 
-<aside id="andenDel">
+<section id="andenDel">
   <h2>DIN ASTROLOGISKE PROFIL</h2>
 
   <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="indledendetekst">Velkommen til astrologiens verden! Din 'Big Three' - soltegn, månetegn og ascendant -
+  <p class="introTekst">Velkommen til astrologiens verden! Din 'Big Three' - soltegn, månetegn og ascendant -
     former din unikke personlighed. Soltegnet viser, hvem du er, månetegnet afslører dine følelser, og ascendanten
     viser, hvordan du fremstår udadtil.</p>
-  <p class="indledendetekst">Indtast din fødselsdato og -tid for at beregne dine 'Big Three'.
+  <p class="introTekst">Indtast din fødselsdato og -tid for at beregne dine 'Big Three'.
   <p>
 
     <!--Mies del indsættes her-->
@@ -99,7 +101,7 @@
 
 Inddeler det i sektioner for at kunne style det nemmere efter
 Giver sektionerne samme class, da de skal styles ens -->
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/soltegn.webp" alt="Et forenklet stregtegnet ikon af en sol uden solstråler" width="175">
 
     <article>
@@ -108,10 +110,10 @@ Giver sektionerne samme class, da de skal styles ens -->
         innovative ideer. Du elsker at tænke uden for boksen og har en dyb interesse for menneskehedens velbefindende.
         Dine unikke perspektiver og sociale ånd gør dig til en inspirerende ven.</p>
     </article>
-  </aside>
+  </section>
 
 
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/maanetegn.webp" alt="Et stregtegnet ikon af en aftagende måne" width="175">
 
     <article>
@@ -120,10 +122,10 @@ Giver sektionerne samme class, da de skal styles ens -->
         Det betyder også at dine dybeste behov handler om følelsesmæssig nærhed og tryghed. Din intuition og empati er
         stærke, og du skaber gerne et varmt og trygt rum for dem, du holder af.</p>
     </article>
-  </aside>
+  </section>
 
 
-  <aside class="CKuddybbendestjernetegn">
+  <section class="astroInfo">
     <img src="images/ascendant_ikon.webp" alt="Et stregtegnet ikon af en ascendant, som består af en udfyldt cirkel"
       width="175">
     <article>
@@ -131,30 +133,28 @@ Giver sektionerne samme class, da de skal styles ens -->
       <p>Med Skorpionen som ascendant er du intens og gådefuld, og folk mærker hurtigt, at der er dybde bag facaden. Din
         aura udstråler magnetisk tiltrækning og stille styrke, og du søger altid autenticitet i alt, du gør.</p>
     </article>
-  </aside>
+  </section>
 
-</aside>
+</section>
 
-<aside id="tredjeDel">
+<section id="tredjeDel">
   <!-- TREDJE INDLEDNING -->
   <h2>DEL MED VENNERNE</h2>
 
   <!--Giver paragraphen enn class, da den (sammen med få andre) skal styles anderledes end de variable der er defineret i CSS'en-->
-  <p class="indledendetekst">Dine 'Big Three' - soltegn, månetegn og ascendant - giver dig en unik indsigt i, hvem du
+  <p class="introTekst">Dine 'Big Three' - soltegn, månetegn og ascendant - giver dig en unik indsigt i, hvem du
     er. Udforsk disse aspekter for at opnå dybere selvforståelse og forbedre dine relationer. </p>
 
   <img src="images/qrkoode.webp" alt="QR kode, som skal føre til sociale medier så man kan dele sine resultater"
     width="300" id="qrKode">
 
-  <p class="indledendetekst">Del din rejse med dine venner på sociale medier ved at scanne QR-koden og lad dem opdage
+  <p class="introTekst">Del din rejse med dine venner på sociale medier ved at scanne QR-koden og lad dem opdage
     deres personlige astrologiske univers. </p>
 
-</aside>
+</section>
 
-  <main>
 
-  </main>
-  <script src="js/stjernetegn.js"></script>
+</main>
 </body>
 
 </html>

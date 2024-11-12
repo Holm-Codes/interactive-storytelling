@@ -1,4 +1,5 @@
-// const introTekst = document.getElementsByClassName("indledendetekst");
+
+const delEt = document.getElementById("foersteDel");
 const delTo = document.getElementById("andenDel");
 const delTre = document.getElementById("tredjeDel");
 
@@ -36,7 +37,7 @@ window.onscroll = function () {
 };
 
 function fadeInd() {
-    const dele = [delTo, delTre];
+    const dele = [delEt, delTo, delTre];
 
     dele.forEach((del) => {
         const positionInfo = del.getBoundingClientRect();

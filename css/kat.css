@@ -95,23 +95,23 @@ main {
     transition: transform 0.5s ease; /* Transition for at flytte cirklen */
 }
 
-/* .container.move-left:
-   Når klassen "move-left" tilføjes til .container, flyttes hele containeren 300px til venstre
-   og skaleres til 80% af sin oprindelige størrelse, hvilket skaber plads til detaljevisningen af det valgte stjernetegn */
 .container.move-left {
     transform: translateX(-300px) scale(0.8); /* Flyt til venstre og reducer størrelse */
 }
 
+/* Cirklen */
 .circle {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
 
+
+
 .zodiac-large {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Stacker billedet og teksten lodret */
+    align-items: center; /* Centrerer elementerne horisontalt */
     text-align: center;
 }
 
@@ -120,20 +120,18 @@ main {
     top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg)); /* Flytter og roterer hvert stjernetegn i en cirkel:
-    translate(-50%, -50%): Centrerer elementet omkring sit eget midtpunkt.
-    - rotate(calc(var(--angle) * 1deg)): Roterer elementet i cirklen baseret på variablen --angle.
-    - translate(0, -380px): Flytter elementet opad i forhold til cirklens centrum for at placere det i en cirkulær form.
-    - rotate(calc(-1 * var(--angle) * 1deg)): Roterer elementet tilbage, så det ikke selv ser drejet ud. */
-    text-align: center; 
+    /* Øg translate-afstanden for en større cirkel */
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg));
+    text-align: center;
     margin-left: -5px;
-    transition: transform 0.5s; /* Giver en blød overgang for transformationsændringer (f.eks. hover) */
+    transition: transform 0.5s;
 }
 
 .zodiac:hover {
-    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg)) scale(1.5); /* Forstørrer elementet ved hover, så det vises større og fremhævet.*/
-    transition: transform 0.5s; /* Ændringen sker glidende over 0,5 sekunder. */
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg)) scale(1.5);
+    transition: transform 0.5s;
 }
+
 
 .zodiac a {
     display: flex;
@@ -155,10 +153,9 @@ main {
 
 .zodiac figcaption {
     margin-top: 10px; /* Juster denne værdi for at øge eller mindske afstanden */
-    color: #FFFFFF;
-    font-family: "roca", sans-serif;
-    font-size: large;
 }
+
+
 
 /* Detaljevisning af det valgte stjernetegn */
 .zodiac-details {

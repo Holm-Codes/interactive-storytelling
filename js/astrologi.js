@@ -8,7 +8,13 @@ document.getElementById("play-sound").addEventListener("click", function() {
 });
 
 
-// Data for stjernetegn
+// zodiacData er et objekt, der gemmer data for de 12 stjernetegn. Hvert stjernetegn fungerer som en nøgle
+// (f.eks. "Vædderen", "Tyren") med en værdi, der er et indlejret objekt. Dette indlejrede objekt indeholder:
+// - image: stien til en billedfil, der repræsenterer stjernetegnet, f.eks. "images/vaedderen.webp"
+// - description: en kort tekst, der beskriver karakteristika ved stjernetegnet
+// Denne objektstruktur gør det let at hente billedet og beskrivelsen for et specifikt stjernetegn,
+// hvilket kan bruges til dynamisk at vise disse oplysninger i en detaljevisning, når brugeren klikker på et stjernetegn.
+
 const zodiacData = {
     "Vædderen": {
         image: "images/vaedderen.webp",
@@ -59,30 +65,34 @@ const zodiacData = {
         description: "Drømmer du ofte væk i din egen verden? Fiskene er dybt følsomme, kreative og intuitivt forbundne med alt omkring dem. Dyk ned i, hvad der gør din verden så magisk og grænseløs."
     }
 };
-// Funktion til at vise detaljer for et stjernetegn
-function showZodiacDetails(zodiacName) {
-    console.log("showZodiacDetails called with: ", zodiacName); // Debugging: Tjek om funktionen kaldes
+// Funktion til at vise detaljer for et valgt stjernetegn.
+// showZodiacDetails(zodiacName) kaldes med navnet på stjernetegnet og opdaterer HTML'en,
+// så billedet, navnet og beskrivelsen af stjernetegnet vises i en detaljevisning.
 
-    // Flyt cirklen til venstre
+function showZodiacDetails(zodiacName) {
+    console.log("showZodiacDetails called with: ", zodiacName); // Debugging: Bekræfter i konsollen, at funktionen kaldes med det rigtige zodiacName.
+
+    // Flytter cirklen med stjernetegn til venstre ved at tilføje klassen "move-left" til .container,
+    // hvilket skaber plads til detaljevisningen af det valgte stjernetegn.
     document.querySelector(".container").classList.add("move-left");
 
-    // Hent elementer til detaljevisning
-    const zodiacImage = document.getElementById("zodiac-image");
-    const zodiacTitle = document.getElementById("zodiac-name");
-    const zodiacDescription = document.getElementById("zodiac-description");
+    // Henter elementer til detaljevisningen for at kunne opdatere dem med data for det valgte stjernetegn:
+    const zodiacImage = document.getElementById("zodiac-image"); // Billed-element til at vise stjernetegnets billede
+    const zodiacTitle = document.getElementById("zodiac-name"); // Titel-element til at vise stjernetegnets navn
+    const zodiacDescription = document.getElementById("zodiac-description"); // Beskrivelse-element til at vise stjernetegnets beskrivelse
 
-    // Opdater detaljevisningen med det valgte stjernetegn
-    const data = zodiacData[zodiacName];
-    zodiacImage.src = data.image;
-    zodiacTitle.textContent = zodiacName;
-    zodiacDescription.textContent = data.description;
+    // Finder data for det valgte stjernetegn og opdaterer HTML-elementerne:
+    const data = zodiacData[zodiacName]; // Henter billed- og beskrivelsesdata fra zodiacData for det valgte stjernetegn
+    zodiacImage.src = data.image; // Opdaterer billedet i detaljevisningen
+    zodiacTitle.textContent = zodiacName; // Opdaterer navnet i detaljevisningen
+    zodiacDescription.textContent = data.description; // Opdaterer beskrivelsen i detaljevisningen
 
-    // Vis detaljeområdet
+    // Tilføjer klassen "active" til elementet med id'et "zodiac-details" for at vise detaljevisningen.
     document.getElementById("zodiac-details").classList.add("active");
 }
 
-// Funktion til at skjule detaljevisningen
+// Funktion til at skjule detaljevisningen, når brugeren vælger at forlade detaljevisningen.
 function hideZodiacDetails() {
-    document.getElementById("zodiac-details").classList.remove("active");
-    window.location.href = 'stjernetegn.html';
+    document.getElementById("zodiac-details").classList.remove("active"); // Fjerner klassen "active" for at skjule detaljevisningen.
+    window.location.href = 'stjernetegn.html'; // Navigerer tilbage til hovedsiden (stjernetegn.html).
 }

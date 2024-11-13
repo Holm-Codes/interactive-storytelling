@@ -128,7 +128,7 @@ main {
 }
 
 .zodiac:hover {
-    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg)) scale(1.5);
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -360px) rotate(calc(-1 * var(--angle) * 1deg)) scale(1.5);
     transition: transform 0.5s;
 }
 

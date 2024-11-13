@@ -1,12 +1,6 @@
 
 
 console.log("JavaScript loaded");
-document.getElementById("play-sound").addEventListener("click", function() {
-    console.log("Lyd afspilles");
-    const audio = document.getElementById("audio");
-    audio.play();
-});
-
 
 // zodiacData er et objekt, der gemmer data for de 12 stjernetegn. Hvert stjernetegn fungerer som en nøgle
 // (f.eks. "Vædderen", "Tyren") med en værdi, der er et indlejret objekt. Dette indlejrede objekt indeholder:

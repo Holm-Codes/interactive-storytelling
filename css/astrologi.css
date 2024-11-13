@@ -120,7 +120,7 @@ main {
     top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -380px) rotate(calc(-1 * var(--angle) * 1deg)); /* Flytter og roterer hvert stjernetegn i en cirkel:
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) * 1deg)) translate(0, -360px) rotate(calc(-1 * var(--angle) * 1deg)); /* Flytter og roterer hvert stjernetegn i en cirkel:
     translate(-50%, -50%): Centrerer elementet omkring sit eget midtpunkt.
     - rotate(calc(var(--angle) * 1deg)): Roterer elementet i cirklen baseret på variablen --angle.
     - translate(0, -380px): Flytter elementet opad i forhold til cirklens centrum for at placere det i en cirkulær form.

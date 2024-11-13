@@ -175,5 +175,3 @@ starIcon.addEventListener('click', () => { /*Tilføjer en click event listening,
         starContainer.classList.remove('icon-move'); /*Ikonets position nulstilles og rykkes tilbage hvor den startede (så tilbage i midten of væk fra venstre*/
     }
 });
-
-// KODEN ER VALIDERET - ALT OK! 

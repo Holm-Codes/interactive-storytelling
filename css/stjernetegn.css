@@ -79,7 +79,10 @@
 
 }
  
-
+/* Placering og styling af tilbagepilen */
+#tilbagePil{
+  margin: 20px;
+}
 
 
 /* ---- UDDYBBENDE TEKSTER - DELEN ---- */

@@ -27,93 +27,111 @@
         </audio>
     </div>
 
-        <main>
-            <nav class="icons">
-                <img src="images/lyd_ikon.webp" alt="Play Sound" id="play-sound" style="width: 60px; cursor: pointer;">
-                <img src="images/eng_flag.webp" alt="Change Language" id="change-language"
-                    style="width: 70px; cursor: pointer;">
-            </nav>
+    <main>
+        <nav class="icons">
+            <img src="images/lyd_ikon.webp" alt="Play Sound" id="play-sound" style="width: 60px; cursor: pointer;">
+            <img src="images/eng_flag.webp" alt="Change Language" id="change-language"
+                style="width: 70px; cursor: pointer;">
+        </nav>
 
-            <audio id="audio" src="media/sound.mp3"></audio> <!--link til lydfil -->
+        <audio id="audio" src="media/sound.mp3"></audio> <!--link til lydfil -->
 
-            <div class="container">
-                <div class="circle">
-                    <!-- 12 stjernetegn -->
-                    <figure class="zodiac" style="--angle: 0;" onclick="showZodiacDetails('Vædderen')">
-                            <img src="images/vaedderen.webp" alt="Vædderen">
-                            <figcaption>Vædderen</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 30;" onclick="showZodiacDetails('Tyren')">
-                            <img src="images/tyren.webp" alt="Tyren">
-                            <figcaption>Tyren</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 60;" onclick="showZodiacDetails('Tvillingen')">
-                            <img src="images/tvillingen.webp" alt="Tvillingen">
-                            <figcaption>Tvillingen</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 90;" onclick="showZodiacDetails('Krebsen')">
-                            <img src="images/krebsen.webp" alt="Krebsen">
-                            <figcaption>Krebsen</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 120;" onclick="showZodiacDetails('Løven')">
-                            <img src="images/loeven.webp" alt="Løven">
-                            <figcaption>Løven</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 150;" onclick="showZodiacDetails('Jomfruen')">
-                            <img src="images/jomfruen.webp" alt="Jomfruen">
-                            <figcaption>Jomfruen</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 180;" onclick="showZodiacDetails('Vægten')">
-                            <img src="images/vaegten.webp" alt="Vægten">
-                            <figcaption>Vægten</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 210;" onclick="showZodiacDetails('Skorpionen')">
-                            <img src="images/scorpionen.webp" alt="Skorpionen">
-                            <figcaption>Skorpionen</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 240;" onclick="showZodiacDetails('Skytten')">
-                            <img src="images/skytten.webp" alt="Skytten">
-                            <figcaption>Skytten</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 270;" onclick="showZodiacDetails('Stenbukken')">
-                            <img src="images/stenbukken.webp" alt="Stenbukken">
-                            <figcaption>Stenbukken</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 300;" onclick="showZodiacDetails('Vandmanden')">
-                            <img src="images/vandmanden.webp" alt="Vandmanden">
-                            <figcaption>Vandmanden</figcaption>
-                        </a>
-                    </figure>
-                    <figure class="zodiac" style="--angle: 330;" onclick="showZodiacDetails('Fisken')">
-                            <img src="images/fisken.webp" alt="Fisken">
-                            <figcaption>Fisken</figcaption>
-                        </a>
-                    </figure>
+        <!-- Dette HTML-kodeafsnit skaber en cirkulær visning af de 12 stjernetegn som interaktive elementer. 
+         Hver figur (<figure>) repræsenterer et stjernetegn og placeres med en vinkel omkring cirklen baseret på --angle CSS-egenskaben.
+        Når man klikker på et stjernetegn, aktiveres funktionen showZodiacDetails(), som viser detaljer om det valgte stjernetegn. 
+        Billederne og teksten (figcaption) repræsenterer det respektive stjernetegn. -->
+        <div class="container">
+            <!-- .container samler alle stjernetegn-elementer, centrerer dem på skærmen og muliggør en glidende overgang, hvor cirklen flyttes og skaleres for at vise detaljer -->
+            <div class="circle">
+                <!--circle sørger for, at stjernetegnene placeres i en ensartet cirkel og centreres i layoutet.-->
+                <!-- 12 stjernetegn -->
+                <figure class="zodiac" style="--angle: 0;" onclick="showZodiacDetails('Vædderen')">
+                    <!--gør elementet interaktivt ved at vise detaljer om "Vædderen", når der klikkes på det.-->
+                    <img src="images/vaedderen.webp" alt="Vædderen">
+                    <figcaption>Vædderen</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 30;" onclick="showZodiacDetails('Tyren')">
+                    <img src="images/tyren.webp" alt="Tyren">
+                    <figcaption>Tyren</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 60;" onclick="showZodiacDetails('Tvillingen')">
+                    <img src="images/tvillingen.webp" alt="Tvillingen">
+                    <figcaption>Tvillingen</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 90;" onclick="showZodiacDetails('Krebsen')">
+                    <img src="images/krebsen.webp" alt="Krebsen">
+                    <figcaption>Krebsen</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 120;" onclick="showZodiacDetails('Løven')">
+                    <img src="images/loeven.webp" alt="Løven">
+                    <figcaption>Løven</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 150;" onclick="showZodiacDetails('Jomfruen')">
+                    <img src="images/jomfruen.webp" alt="Jomfruen">
+                    <figcaption>Jomfruen</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 180;" onclick="showZodiacDetails('Vægten')">
+                    <img src="images/vaegten.webp" alt="Vægten">
+                    <figcaption>Vægten</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 210;" onclick="showZodiacDetails('Skorpionen')">
+                    <img src="images/scorpionen.webp" alt="Skorpionen">
+                    <figcaption>Skorpionen</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 240;" onclick="showZodiacDetails('Skytten')">
+                    <img src="images/skytten.webp" alt="Skytten">
+                    <figcaption>Skytten</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 270;" onclick="showZodiacDetails('Stenbukken')">
+                    <img src="images/stenbukken.webp" alt="Stenbukken">
+                    <figcaption>Stenbukken</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 300;" onclick="showZodiacDetails('Vandmanden')">
+                    <img src="images/vandmanden.webp" alt="Vandmanden">
+                    <figcaption>Vandmanden</figcaption>
+                    </a>
+                </figure>
+                <figure class="zodiac" style="--angle: 330;" onclick="showZodiacDetails('Fisken')">
+                    <img src="images/fisken.webp" alt="Fisken">
+                    <figcaption>Fisken</figcaption>
+                    </a>
+                </figure>
 
-                    <!-- Detaljevisning af det valgte stjernetegn -->
-                    <div class="zodiac-details" id="zodiac-details">
-                        <div class="zodiac-large">
-                            <img id="zodiac-image">
-                            <h2 id="zodiac-name"></h2>
-                            <p id="zodiac-description"></p>
-                            <button onclick="hideZodiacDetails()">Læs mere</button>
-                        </div>
+                <!-- Detaljevisning af valgt stjernetegn med billede, navn og beskrivelse, samt en knap til at skjule visningen -->
+                <div class="zodiac-details" id="zodiac-details"> <!-- Container til detaljevisning af et valgt stjernetegn:
+                        - id="zodiac-details" gør det muligt at referere direkte til denne div i JavaScript, så den kan vises eller skjules dynamisk.
+                        - class="zodiac-details" tillader specifik CSS-styling for layout, overgangseffekter og synlighed.
+                        - Indeholder elementer som billede, navn og beskrivelse af stjernetegnet. -->
+                    <div class="zodiac-large"> <!--zodiac-large viser det valgte stjernetegn større og centralt:
+                            - Samler billede, navn og beskrivelse som en enhed.
+                            - Tillader CSS-styling for forstørrelse og centrering.
+                            - Skaber en brugervenlig visning af stjernetegnet ved klik. -->
+                        <img id="zodiac-image">
+                        <!-- viser billedet af det valgte stjernetegn i detaljevisningen, opdateres dynamisk i showZodiacDetails() funktionen. JavaScript henter elementet og sætter src-attributten med det valgte stjernetegns billede-->
+                        <h2 id="zodiac-name"></h2>
+                        <!-- viser navnet på det aktuelt valgte stjernetegn i detaljevisningen.-->
+                        <p id="zodiac-description"></p>
+                        <!-- viser beskrivelsen af det aktuelt valgte stjernetegn i detaljevisningen.-->
+                        <button onclick="hideZodiacDetails()">Læs mere</button>
+                        <!--Funktionen fjerner klassen "active" fra <div id="zodiac-details">, hvilket skjuler detaljevisningen af det valgte stjernetegn 
+                                og nulstiller visningen, så brugeren vender tilbage til hovedcirklen med alle stjernetegn. -->
                     </div>
-
-
                 </div>
-        </main>
-        
+
+
+            </div>
+    </main>
+
 
     <script src="js/astrologi.js" defer></script>
 </body>
